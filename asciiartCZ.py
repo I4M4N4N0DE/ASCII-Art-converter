@@ -1,4 +1,4 @@
-from art import * # nutno stáhnout knihovnu python-art pro funkčnost
+from art import * # nutno stáhnout knihovnu python-art pro funkčnost - jednoduše napište "pip install art"
 import time
 
 class Main: # hlavní třída Main se všemi metodami
