@@ -6,4 +6,4 @@ Everything that has to be is commented, so have fun!
 # CZ
 Hezký, malý a srozumitelný kód, který vytvoří ASCII umění ze zadaného textu.
 Je rychlý a jednoduchý k používání.
-Vše, co je potřeba, je okomentováno, have fun"
+Vše, co je potřeba, je okomentováno, have fun!
