@@ -1,4 +1,4 @@
-from art import * # download Python Art library for having the program functional
+from art import * # download Python Art library for having the program functional - just type "pip install art" into your cmd/console
 import time
 
 class Main: # the Main class of the code storing all the methods
