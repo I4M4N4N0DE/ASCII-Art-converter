@@ -1,17 +1,12 @@
-from art import * # nutno stáhnout knihovnu python-art pro funkčnost - jednoduše napište "pip install art"
+from art import * # nutno stáhnout knihovnu python-art pro funkčnost
 import time
 
 class Main: # hlavní třída Main se všemi metodami
     
     def asciiConsole(): # generátor bez ukládání
-    
-        # uvedení
-        tprint("ASCII Art generator")
-        print("SKVOSTNÝ KUS KÓDU, KTERÝ UDĚLÁ Z TVÉHO TEXTU ASCII ART")
-        print("režim bez ukládání")
-        print("Copyright: René Valenta 2022")
         
         # funkce generátoru
+        print("režim bez ukládání")
         print("")
         text = str(input("Napiš text co chceš převést: "))
         print("Z tvého textu se teď stane ASCII umění.")
@@ -22,17 +17,12 @@ class Main: # hlavní třída Main se všemi metodami
         print("Tvé umění je ready na zkopírování, ale NENÍ uloženo!!!")
         print("Zavřením programu přijdeš o své umění.")
         print("")
-        Main.main()
+        Main.asciiConsole()
 
     def asciiConsoleSaver(): # generátor s ukládáním
-    
-        # úvod
-        tprint("ASCII Art generator")
-        print("SKVOSTNÝ KUS KÓDU, KTERÝ UDĚLÁ Z TVÉHO TEXTU ASCII ART")
-        print("režim s ukládáním")
-        print("Vytvořeno s láskou od Reného Valenty, 2022")
-        
+
         # konverze a tisk artu
+        print("režim s ukládáním")
         print("")
         text = str(input("Napiš text co chceš převést: "))
         print("Z tvého textu se teď stane ASCII umění.")
@@ -61,7 +51,12 @@ class Main: # hlavní třída Main se všemi metodami
     
     # funkce počátečního navigátoru
     def main():
-    
+        
+        # uvedení
+        tprint("ASCII Art generator")
+        print("SKVOSTNÝ KUS KÓDU, KTERÝ UDĚLÁ Z TVÉHO TEXTU ASCII ART")
+        print("Copyright: René Valenta 2022")
+        print("")
         print("Vyber režim, který chceš: ")
         print("")
         print("[0] pouze ASCII art v terminálu (pro kopírování)")
