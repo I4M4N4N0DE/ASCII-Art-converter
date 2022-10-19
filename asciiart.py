@@ -1,17 +1,12 @@
-from art import * # download Python Art library for having the program functional - just type "pip install art" into your cmd/console
+from art import * # download Python Art library for having the program functional
 import time
 
 class Main: # the Main class of the code storing all the methods
     
     def asciiConsole(): # the non-saving generator
     
-        # an introduction
-        tprint("ASCII Art generator")
-        print("SHINY PIECE OF A CODE WHICH TURNS YOUR TEXT INTO AN ASCII ART")
-        print("non-saving mode")
-        print("Made with love by Rene Valenta, 2022")
-        
         # generating function
+        print("non-saving mode")
         print("")
         text = str(input("Enter the text you want to convert: "))
         print("Your text is gonna be converted into an ASCII art.")
@@ -22,17 +17,12 @@ class Main: # the Main class of the code storing all the methods
         print("Your art is ready for copying, but ISN'T saved!!!")
         print("Cancelling the program will erase your art.")
         print("")
-        Main.main()
+        Main.asciiConsole()
 
     def asciiConsoleSaver(): # the saving generator
-    
-        # an introduction
-        tprint("ASCII art generator")
-        print("SHINY PIECE OF A CODE WHICH TURNS YOUR TEXT INTO AN ASCII ART")
-        print("saving mode")
-        print("Copyright: Rene Valenta 2022")
-        
+       
         # converting and printing the art
+        print("saving mode")
         print("")
         text = str(input("Enter the text you want to convert: "))
         print("Your text is gonna be converted into an ASCII art.")
@@ -59,9 +49,13 @@ class Main: # the Main class of the code storing all the methods
                 print("Sorry - didn't understand - again? ")
                 runner()
     
-    # beginning navigator function
-    def main():
-    
+    def main(): # beginning navigator function
+        
+        # an introduction
+        tprint("ASCII Art generator")
+        print("SHINY PIECE OF A CODE WHICH TURNS YOUR TEXT INTO AN ASCII ART")
+        print("Made with love by Rene Valenta, 2022")
+        print("")
         print("Choose the mode you wanna start: ")
         print("")
         print("[0] ASCII art only into the console (for late copying)")
