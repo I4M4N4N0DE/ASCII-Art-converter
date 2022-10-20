@@ -19,15 +19,15 @@ def asciiConsole(): # generátor bez ukládání
     while True:
             
         # restart
-        print("Restart the program?")
-        choice = str(input("[Y/N]: "))
+        print("Restartovat program?")
+        choice = str(input("[A/N]: "))
     
-        if choice == "Y":
+        if choice == "A":
             main()
         elif choice == "N":
             quit()
         else:
-            print("Sorry - didn't understand - again? ")
+            print("Promiň - nerozuměl jsem ti - znovu: ")
 
 def asciiConsoleSaver(): # generátor s ukládáním
 
@@ -48,15 +48,15 @@ def asciiConsoleSaver(): # generátor s ukládáním
     while True:
             
         # restart
-        print("Restart the program?")
-        choice = str(input("[Y/N]: "))
+        print("Restartovat program?")
+        choice = str(input("[A/N]: "))
     
-        if choice == "Y":
+        if choice == "A":
             main()
         elif choice == "N":
             quit()
         else:
-            print("Sorry - didn't understand - again? ")
+            print("Promiň - nerozuměl jsem ti - znovu: ")
     
 # funkce počátečního navigátoru
 def main():
@@ -68,7 +68,7 @@ def main():
     print("")
     print("Vyber režim, který chceš: ")
     print("")
-    print("[0] pouze ASCII art v terminálu (pro kopírování - opakuje se do vypnutí programu")
+    print("[0] pouze ASCII art v terminálu (pro kopírování)")
         
     while True:
 
