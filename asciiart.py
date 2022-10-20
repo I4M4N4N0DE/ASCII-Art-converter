@@ -57,7 +57,7 @@ def main(): # beginning navigator function
     print("")
     print("Choose the mode you wanna start: ")
     print("")
-    print("[0] ASCII art only into the console (for late copying - repeats until the program is shut down)")
+    print("[0] ASCII art only into the console (for late copying)")
         
     while True:
 
