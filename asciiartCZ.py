@@ -1,85 +1,83 @@
 import art as ar # nutno stáhnout knihovnu python-art pro funkčnost
 import time
-
-class Main: # hlavní třída Main se všemi metodami
     
-    def asciiConsole(): # generátor bez ukládání
+def asciiConsole(): # generátor bez ukládání
         
-        # funkce generátoru
-        print("režim bez ukládání")
-        print("")
-        text = str(input("Napiš text co chceš převést: "))
-        print("Z tvého textu se teď stane ASCII umění.")
-        artpiece = ar.text2art(text)
-        print(artpiece)
+    # funkce generátoru
+    print("režim bez ukládání")
+    print("")
+    text = str(input("Napiš text co chceš převést: "))
+    print("Z tvého textu se teď stane ASCII umění.")
+    artpiece = ar.text2art(text)
+    print(artpiece)
         
-        # info a restart
-        print("Tvé umění je ready na zkopírování, ale NENÍ uloženo!!!")
-        print("Zavřením programu přijdeš o své umění.")
-        print("")
+    # info a restart
+    print("Tvé umění je ready na zkopírování, ale NENÍ uloženo!!!")
+    print("Zavřením programu přijdeš o své umění.")
+    print("")
         
-        while True:
+    while True:
             
-            # restart
-            print("Restart the program?")
-            choice = str(input("[Y/N]: "))
+        # restart
+        print("Restart the program?")
+        choice = str(input("[Y/N]: "))
     
-            if choice == "Y":
-                Main.main()
-            elif choice == "N":
-                quit()
-            else:
-                print("Sorry - didn't understand - again? ")
+        if choice == "Y":
+            main()
+        elif choice == "N":
+            quit()
+        else:
+            print("Sorry - didn't understand - again? ")
 
-    def asciiConsoleSaver(): # generátor s ukládáním
+def asciiConsoleSaver(): # generátor s ukládáním
 
-        # konverze a tisk artu
-        print("režim s ukládáním")
-        print("")
-        text = str(input("Napiš text co chceš převést: "))
-        print("Z tvého textu se teď stane ASCII umění.")
-        artpiece = ar.text2art(text)
-        print(artpiece)
+    # konverze a tisk artu
+    print("režim s ukládáním")
+    print("")
+    text = str(input("Napiš text co chceš převést: "))
+    print("Z tvého textu se teď stane ASCII umění.")
+    artpiece = ar.text2art(text)
+    print(artpiece)
         
-        # uložení artu do souboru
-        with open("/home/cathodec/Desktop/art.txt", "w") as saveArt: # změň si cestu k souboru podle sebe a pojmenuj jak chceš
-            saveArt.write(artpiece)
+    # uložení artu do souboru
+    with open("/home/cathodec/Desktop/art.txt", "w") as saveArt: # změň si cestu k souboru podle sebe a pojmenuj jak chceš
+        saveArt.write(artpiece)
         print("Tvé umění je uloženo.")
         print("")
 
-        while True:
+    while True:
             
-            # restart
-            print("Restart the program?")
-            choice = str(input("[Y/N]: "))
+        # restart
+        print("Restart the program?")
+        choice = str(input("[Y/N]: "))
     
-            if choice == "Y":
-                Main.main()
-            elif choice == "N":
-                quit()
-            else:
-                print("Sorry - didn't understand - again? ")
+        if choice == "Y":
+            main()
+        elif choice == "N":
+            quit()
+        else:
+            print("Sorry - didn't understand - again? ")
     
-    # funkce počátečního navigátoru
-    def main():
+# funkce počátečního navigátoru
+def main():
         
-        # uvedení
-        ar.tprint("ASCII Art generator")
-        print("SKVOSTNÝ KUS KÓDU, KTERÝ UDĚLÁ Z TVÉHO TEXTU ASCII ART")
-        print("Copyright: René Valenta 2022")
-        print("")
-        print("Vyber režim, který chceš: ")
-        print("")
-        print("[0] pouze ASCII art v terminálu (pro kopírování - opakuje se do vypnutí programu")
+    # uvedení
+    ar.tprint("ASCII Art generator")
+    print("SKVOSTNÝ KUS KÓDU, KTERÝ UDĚLÁ Z TVÉHO TEXTU ASCII ART")
+    print("Copyright: René Valenta 2022")
+    print("")
+    print("Vyber režim, který chceš: ")
+    print("")
+    print("[0] pouze ASCII art v terminálu (pro kopírování - opakuje se do vypnutí programu")
         
-        while True:
+    while True:
 
-            startup = input("[1] ASCII art, co se následně uloží do souboru: ") 
+        startup = input("[1] ASCII art, co se následně uloží do souboru: ") 
     
-            if startup == "1":
-                Main.asciiConsoleSaver()
-            elif startup == "0":
-                Main.asciiConsole()
-            else:
-                print("Promiň - znovu: ")
-Main.main()
+        if startup == "1":
+            asciiConsoleSaver()
+        elif startup == "0":
+            asciiConsole()
+        else:
+            print("Promiň - znovu: ")
+main()
