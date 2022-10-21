@@ -1,10 +1,6 @@
 import art as ar # download Python Art library for having the program functional
-import time
-
     
 def asciiConsole(): # the non-saving generator
-        
-    while True:
             
         # generating function
         print("non-saving mode")
@@ -18,6 +14,19 @@ def asciiConsole(): # the non-saving generator
         print("Your art is ready for copying, but ISN'T saved!!!")
         print("Cancelling the program will erase your art.")
         print("")
+        
+        while True:
+            
+            # restart
+            print("Restart the program?")
+            choice = input("[Y/N]: ")
+    
+            if choice == "Y":
+                asciiConsole()
+            elif choice == "N":
+                quit()
+            else:
+                print("Sorry - didn't understand - again? ")
 
 def asciiConsoleSaver(): # the saving generator
        
@@ -39,10 +48,10 @@ def asciiConsoleSaver(): # the saving generator
             
         # restart
         print("Restart the program?")
-        choice = str(input("[Y/N]: "))
+        choice = input("[Y/N]: ")
     
         if choice == "Y":
-          main()
+            asciiConsoleSaver()
         elif choice == "N":
             quit()
         else:
@@ -58,10 +67,11 @@ def main(): # beginning navigator function
     print("Choose the mode you wanna start: ")
     print("")
     print("[0] ASCII art only into the console (for late copying)")
+    print("[1] ASCII art that will also save itself into a file automatically: ")
         
     while True:
 
-        startup = input("[1] ASCII art that will also save itself into a file automatically: ") 
+        startup = input()
     
         if startup == "1":
             asciiConsoleSaver()
