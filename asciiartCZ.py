@@ -1,5 +1,4 @@
 import art as ar # nutno stáhnout knihovnu python-art pro funkčnost
-import time
     
 def asciiConsole(): # generátor bez ukládání
         
@@ -23,7 +22,7 @@ def asciiConsole(): # generátor bez ukládání
         choice = str(input("[A/N]: "))
     
         if choice == "A":
-            main()
+            asciiConsole()
         elif choice == "N":
             quit()
         else:
@@ -52,7 +51,7 @@ def asciiConsoleSaver(): # generátor s ukládáním
         choice = str(input("[A/N]: "))
     
         if choice == "A":
-            main()
+            asciiConsoleSaver()
         elif choice == "N":
             quit()
         else:
@@ -69,10 +68,11 @@ def main():
     print("Vyber režim, který chceš: ")
     print("")
     print("[0] pouze ASCII art v terminálu (pro kopírování)")
+    print("[1] ASCII art, co se následně uloží do souboru: ")
         
     while True:
 
-        startup = input("[1] ASCII art, co se následně uloží do souboru: ") 
+        startup = input() 
     
         if startup == "1":
             asciiConsoleSaver()
